@@ -35,27 +35,17 @@ header{
     z-index: 10;
     left: 0;
     right: 0;
-    font-size: 30px;
 }
 .brand-name{
-    font-size:30px ;
-}
-@media (max-width:490px){
-    .about,.home{
-        font-size: 8px;
-    }
-    .brand-name{
-        font-size: 12px;
-    }
-    .transparent-header{
-        font-size: 12px;
-    }
+    font-size:2.4vw;
+    transition: transform 0.25s ease;
+    cursor: pointer;
 }
 .about,.home{
-    font-size: 16px;
+    font-size: 1.05vw;
+    transition: transform 0.25s ease;
 }
 .transparent-header{
-    font-size: 34px;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,7 +68,7 @@ header.big{
 }
 .h-a{
     display: flex;
-    width: 150px;
+    gap: 25px;
     justify-content: space-between;
 }
 .h-a div{
@@ -94,6 +84,28 @@ header.big{
     height: 100%;
     border-bottom: solid 1.5px white;
     transition: 0.2s;
+}
+.he-a{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+.he-a div{
+    position: relative;
+    cursor: pointer;
+}
+.he-a div::before{
+    content: '';
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1.5px black;
+    transition: 0.2s;
+}
+.he-a div:hover::before{
+    transform: scaleX(1);
 }
 .h-a div:hover::before{
     transform: scaleX(1);
@@ -116,10 +128,19 @@ header.big{
 }
 @font-face { font-family: Delicious; src: url('styles/faant.otf'); }
 .bigboi{
-    background-image: linear-gradient(to bottom,black 10%,white 70%);
-    padding-top: 40px;
+    padding-top:100px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 200px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    pointer-events: none; 
 }
 .projects{
     display: flex;
@@ -127,8 +148,8 @@ header.big{
 }
 .project-heading{
     font-family:Delicious;
-    color: white;
-    font-size: 48px;
+    color: black;
+    font-size: 4vw;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -138,7 +159,7 @@ header.big{
 .project-desc{
     max-width: 800px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.5vw;
     font-family: roboto;
 }
 .projects-grid{
@@ -164,12 +185,12 @@ header.big{
 .project-name{
     font-family: roboto;
     margin-top: -15px;
-    font-size: 24px;
+    font-size: 1.55vw;
     margin-bottom: 10px;
 }
 .project-position{
     font-family: Delicious;
-    font-size: 18px;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
@@ -207,4 +228,38 @@ header.big{
 .no-link-effect{
     text-decoration: none;
     color: white;
+}
+@media (max-width:500px){
+    header.big{
+        height: 6vh;
+    }
+    header.small{
+        height: 4vh;
+    }
+    .bigboi{
+        padding-top:50px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .project-desc{
+        max-width: 250px;
+        font-size: 2vw;
+    }
+    .project-window-image img{
+        width: 100%;
+        height: 100%;
+    }
+    .brand-name{
+        font-size: 3vw;
+    }
+    .about,.home{
+        font-size: 2.5vw;
+    }
+    .project-name{
+        font-size: 2.5vw;
+    }
+    .project-position{
+        font-size: 1.5vw;
+    }
 }
