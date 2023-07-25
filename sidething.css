@@ -112,5 +112,24 @@
     left: 0;
 }
 
+@media (max-width:500px){
+    #sidethingi{
+        top: -25%;
+        width: 100%;
+        font-size: 13.5vw;
+    }
+    .sidething-heading{
+        font-size: 1.9vw;
+        padding-left: 100px;
+        padding-right: 50px;
+    }
+    .sidething-socials{
+        font-size: 3.8vw;
+        gap: 30px;
+    }
+    .dot-button{
+        font-size: 19.5vw;
+    } 
+}
 
 
