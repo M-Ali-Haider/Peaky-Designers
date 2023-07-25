@@ -1,0 +1,13 @@
+/* Additional CSS for the black screen animation */
+.black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    opacity: 1;
+    transform: translateY(100%);
+    transition:transform 0.5s ease;
+}

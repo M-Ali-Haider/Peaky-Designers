@@ -1,0 +1,148 @@
+@font-face { font-family: Delicious; src: url('styles/faant.otf'); }
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 200vh;
+    overflow-x: hidden;
+}
+.parallax {
+    position:fixed;
+    top: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(34, 47, 91);
+    height: 100vh;
+}
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+.text{
+    top: 40%;
+    left: 0%;
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 150px;
+}
+.marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+   font-family: sans-serif;
+    font-weight: 500;
+    color: white;
+    z-index: 200;
+}
+@media (max-width:1320px){
+    .text{
+        font-size: 100px;
+    }
+}
+@media(max-width:1030px){
+    .text{
+        font-size: 80px;
+    }
+}
+@media (max-width:780px){
+    .parallax{
+        height: 80vh;
+    }
+    .parallax img{
+        height: 80vh;
+    }
+    .text{
+        font-size: 60px;
+    }
+}
+@media (max-width:632px){
+    .parallax{
+        height: 60vh;
+    }
+    .parallax img{
+        height: 60vh;
+    }
+    .text{
+        font-size:45px;
+    }
+}
+@media (max-width:490px){
+    .parallax{
+        height: 35vh;
+    }
+    .parallax img{
+        height: 35vh;
+    }
+    .Explore p{
+        font-size: 14px;
+        margin-left: -24px;
+        margin-top: 10px;
+    }
+    .marquee{
+        font-size: 35px;
+    }
+}
+
+.blob{
+    width: 100px;
+    height: 50vh;
+    background-color: red;
+}
+
+.Explore{
+    display: flex;
+    position: absolute;
+    margin-top: 0px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top:65%;
+    left: 50%;
+    font-family: Delicious;
+    align-items: center;
+}
+#back-m{
+    transform: translateY(-1.2px);
+}
+.Explore p{
+    z-index: 1;
+    background-color: white;
+    position: relative;
+    color: black;
+    overflow: hidden;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.Explore p::after{
+    content: '';
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 34, 255, 0.7);
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+.Explore p:hover{
+    color: white;
+}
+.Explore p:hover::after{
+    transform: scaleX(1);
+}

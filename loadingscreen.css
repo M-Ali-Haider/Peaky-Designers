@@ -1,0 +1,115 @@
+@font-face { font-family: Delicious; src: url('styles/faant.otf'); }
+@keyframes pushOut {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+        border-radius:50%;
+        transform: translateY(-100%);
+    }
+  }
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+    font-size: 5vw;
+    font-family: Delicious;
+}
+.loading-text{
+    opacity: 0;
+    transition: opacity 0.85s;
+}
+.fade-in {
+    opacity: 1;
+}
+.fade-out {
+    opacity: 0;
+}
+.push-out {
+    animation: pushOut 0.75s forwards;
+  }
+
+  @keyframes loadscreen{
+    from{
+        position: relative;
+        top:-20%;
+        left:0%;
+    }
+    to{
+        position: relative;
+        top:0%;
+        left: 0%;
+    }
+  }
+  .loading-screen-animation{
+    animation: loadscreen 0.75s forwards;
+  }
+  @keyframes dotEnlargement {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#loading-screen .loading-text span {
+    display: inline-block;
+}
+
+#loading-screen .loading-text span:nth-child(1) {
+    animation: dotEnlargement 0.5s;
+    animation-delay: 0.25s;
+}
+
+#loading-screen .loading-text span:nth-child(2) {
+    animation: dotEnlargement 0.5s;
+    animation-delay: 0.75s;
+}
+
+#loading-screen .loading-text span:nth-child(3) {
+    animation: dotEnlargement 0.5s;
+    animation-delay: 1.25s;
+}
+
+
+
+.preloader-1 .line {
+  width: 5px;
+  height: 30px;
+  background: #fff;
+  margin: 0 1px;
+  display: inline-block;
+  animation: opacity-1 1000ms infinite ease-in-out;
+}
+.preloader-1 .line-1, .preloader-2 .line-1 { animation-delay: 800ms; }
+.preloader-1 .line-2, .preloader-2 .line-2 { animation-delay: 600ms; }
+.preloader-1 .line-3, .preloader-2 .line-3 { animation-delay: 400ms; }
+.preloader-1 .line-4, .preloader-2 .line-4 { animation-delay: 200ms; }
+.preloader-1 .line-6, .preloader-2 .line-6 { animation-delay: 200ms; }
+.preloader-1 .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
+.preloader-1 .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
+.preloader-1 .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+
+@keyframes opacity-1 { 
+  0% { 
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }  
+}
