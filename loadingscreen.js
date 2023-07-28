@@ -12,7 +12,7 @@ function hideLoadingScreen() {
   
   setTimeout(function () {
     loadingScreen.style.display = 'none';
-  },750); 
+  },2000); 
 }
 
 window.addEventListener('load', function () {
