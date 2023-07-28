@@ -1,24 +1,24 @@
 function hideLoadingScreen() {
   var loadingScreen = document.getElementById('loading-screen');
-  var loadingtext=document.querySelector('.loading-text');
-  var mainer=document.querySelector('.main');
+  var loadingtext = document.querySelector('.loading-text');
+  var mainer = document.querySelector('.main');
 
   mainer.classList.add('loading-screen-animation');
   loadingScreen.classList.add('push-out');
   loadingtext.classList.remove('fade-in');
-  loadingtext.style.transition=`opacity 0.175s linear`;
+  loadingtext.style.transition = `opacity 0.175s linear`;
   loadingtext.classList.add('fade-out');
-  window.scrollTo(0, 0); 
-  
+  window.scrollTo(0, 0);
+
   setTimeout(function () {
     loadingScreen.style.display = 'none';
-  },2000); 
+  }, 2000);
 }
 
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
   var minimumLoadingTime = 2000;
 
-  var loadingtext=document.querySelector('.loading-text');
+  var loadingtext = document.querySelector('.loading-text');
   loadingtext.classList.add('fade-in');
 
   var pageLoadTime = new Date().getTime() - window.performance.timing.navigationStart;
