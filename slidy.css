@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 175px;
 }
 .row{
     transition: transform 0.3s ease-out;
@@ -112,13 +113,14 @@
 }
 @media (max-width:735px){
     .object{
-        height: 65%;
+        height: 60%;
         padding: 15px;
     }
     .row{
         gap: 10px;
+        height: 150px;
     }
     .sliders{
-        gap: 0px;
+        gap:0px;
     }
 }
