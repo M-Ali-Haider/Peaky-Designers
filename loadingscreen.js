@@ -10,12 +10,13 @@ function hideLoadingScreen() {
   loadingtext.classList.add('fade-out');
   window.scrollTo(0, 0);
 
-  setTimeout(function () {
+  // Now, instead of setting a fixed timeout, we will listen for the animation end event
+  loadingScreen.addEventListener('animationend', function () {
     loadingScreen.style.display = 'none';
-  }, 2000);
+  });
 }
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   var minimumLoadingTime = 2000;
 
   var loadingtext = document.querySelector('.loading-text');
