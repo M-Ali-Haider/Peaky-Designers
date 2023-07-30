@@ -23,35 +23,24 @@ document.addEventListener('DOMContentLoaded', function () {
   loadingtext.classList.add('fade-in');
 
   var pageLoadTime = new Date().getTime() - window.performance.timing.navigationStart;
-  var timeLeft = minimumLoadingTime - pageLoadTime;
 
-  // Calculate the number of resources to be loaded (e.g., images, stylesheets)
-  var resourceCount = 0;
-  var loadedResources = 0;
-  var resources = document.querySelectorAll('img, link[rel="stylesheet"]');
+  var loaded = false;
+  var resourcesLoaded = false;
 
-  function resourceLoaded() {
-    loadedResources++;
-    if (loadedResources === resourceCount && timeLeft <= 0) {
+  function checkLoadingComplete() {
+    if (loaded && resourcesLoaded) {
       hideLoadingScreen();
     }
   }
+  loaded = true;
+  checkLoadingComplete();
 
-  resourceCount = resources.length;
-
-  // Check if resources are already loaded (cached) before adding the event listeners
-  for (var i = 0; i < resourceCount; i++) {
-    if (resources[i].complete) {
-      resourceLoaded();
-    }
-  }
-
-  // Add event listeners for resources that are not yet loaded
-  for (var i = 0; i < resourceCount; i++) {
-    resources[i].addEventListener('load', resourceLoaded);
-    resources[i].addEventListener('error', resourceLoaded); // Handle resource loading errors too
-  }
-
-  // Handle the case where the minimumLoadingTime is not reached, but all resources are loaded
-  setTimeout(hideLoadingScreen, Math.max(timeLeft, 0));
+  // Load event
+  window.addEventListener('load', function () {
+    var timeLeft = minimumLoadingTime - pageLoadTime;
+    setTimeout(function () {
+      resourcesLoaded = true;
+      checkLoadingComplete();
+    }, Math.max(timeLeft, 0));
+  });
 });
