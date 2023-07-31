@@ -86,6 +86,7 @@ canvas{
         height: 35vh;
     }
     .parallax img{
+        margin-left:5px;
         margin-top: 20px;
         z-index:211;
         height: 95%;
