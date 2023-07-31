@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
   });
    let i = 0;
-  const increment = 0.125;
-  const decrement = -0.125;
+  const increment = 0.085;
+  const decrement = -0.085;
   let scrollingDown = false;
 
  
