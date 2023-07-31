@@ -61,7 +61,7 @@ header{
 .about,.home{
     font-size: 1.2vw;
     transition: transform 0.25s ease;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
 }
 .transparent-header{
     position: absolute;
