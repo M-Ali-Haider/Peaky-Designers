@@ -23,6 +23,23 @@ header{
     transition: background-color 0.5s ease;
    
 }
+.typing-text{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    z-index: 201;
+    font-family: Delicious;
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+}
+.iamt{
+      color: white;
+      padding: 15px;
+}
+.textt{
+      color:black;
+  }
 .solid-header{
     position: absolute;
     top: 0;
@@ -253,4 +270,16 @@ header.big{
     .project-position{
         font-size: 2vw;
     }
+    .typing-text{
+        top: 15%;
+        right: 5%;
+        z-index: 201;
+        font-family: Delicious;
+        font-size: 4vw;
+        display: flex;
+        align-items: center;
+    }
+    .iamt{
+        padding: 5px;
+  }
 }
