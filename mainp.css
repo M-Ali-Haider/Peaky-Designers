@@ -82,7 +82,7 @@ canvas{
         height: 35vh;
     }
     .parallax img{
-        height: 35vh;
+        height: 100%;
     }
     .Explore p{
         font-size: 14px;
