@@ -89,6 +89,7 @@ canvas{
         margin-top: 20px;
         z-index:211;
         height: 95%;
+        width:100%;
     }
     .marquee{
         font-size: 45px;
