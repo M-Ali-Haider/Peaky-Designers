@@ -14,8 +14,8 @@ let height = canvas.clientHeight;
 let rotation = 0;
 let dots = [];
 
-const DOTS_AMOUNT =500;
-const DOT_RADIUS = 1.5;
+let DOTS_AMOUNT =500;
+let DOT_RADIUS = 1.5;
 let GLOBE_RADIUS = width * 0.7;
 let GLOBE_CENTER_Z = -GLOBE_RADIUS;
 let PROJECTION_CENTER_X = width / 2; 
