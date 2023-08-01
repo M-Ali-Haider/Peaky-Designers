@@ -19,7 +19,7 @@ body{
 }
 .parallax img{
     pointer-events: none;
-    border:1px solid black;
+    border:1px solid #cdcdcd;
     width: 40%;
     object-fit: cover;
     object-position: center center;
