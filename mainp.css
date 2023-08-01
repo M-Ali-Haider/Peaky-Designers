@@ -17,6 +17,13 @@ body{
     background-color:#cdcdcd;
     height: 100vh;
 }
+.parallax img{
+    pointer-events: none;
+    border:1px solid black;
+    width: 40%;
+    object-fit: cover;
+    object-position: center center;
+}
 canvas{
     position: absolute;
     top: 20%;
@@ -86,11 +93,10 @@ canvas{
         height: 35vh;
     }
     .parallax img{
-        margin-left:5px;
         margin-top: 20px;
         z-index:211;
         height: 95%;
-        width:100%;
+        width: 45%;
     }
     .marquee{
         font-size: 45px;
@@ -99,10 +105,10 @@ canvas{
         top: 75%;
     }
     canvas{
-        top: 20%;
+        top: 20.5%;
         left:0%;
-        width: 12%;
-        height: 20%;
+        width: 13.5%;
+        height: 24%;
         padding: 40px;
     }
 
