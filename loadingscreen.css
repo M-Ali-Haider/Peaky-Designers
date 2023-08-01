@@ -113,3 +113,9 @@
     opacity: 1;
   }  
 }
+
+@media (max-width:500px){
+  .loading-text{
+    font-size: 11vw;
+  }
+}
