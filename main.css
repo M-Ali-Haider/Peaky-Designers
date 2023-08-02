@@ -33,6 +33,9 @@ header{
     display: flex;
     align-items: center;
 }
+canvas{
+    display:flex;
+}
 .iamt{
       color: white;
       padding: 15px;
