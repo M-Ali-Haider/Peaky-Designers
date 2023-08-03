@@ -206,11 +206,8 @@ header.big{
     color: white;
 }
 @media (max-width:500px){
-    header.big{
-        height: 6vh;
-    }
-    header.small{
-        height: 4vh;
+    .transparent-header{
+        height: 7vh;
     }
     .bigboi{
         padding-top:100px;
