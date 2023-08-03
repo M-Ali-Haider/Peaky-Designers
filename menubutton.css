@@ -38,7 +38,12 @@
     gap: 6.5px;
     transition: all 0.3s ease;
   }
-  
+  #magicButton{
+    transition: transform 0.3s linear;
+  }
+  #whymagicc{
+    transition: transform 0.3s linear;
+  }
   .za-box{
     position:fixed;
     top: 5%;
