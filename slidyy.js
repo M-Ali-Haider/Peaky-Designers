@@ -1,12 +1,14 @@
 const row1 = document.getElementById('row1');
 const row2 = document.getElementById('row2');
-const scrollDiv = document.getElementById("sliders");
-
-
+const scrollDiv = document.getElementById("stacker-container");
 let initialTransform1 = 50;
 let initialTransform2 = 100;
+let initialScrollPosition = 0; // Add this line to initialize the variable
+let isAnimationEnabled = window.innerWidth > 500; // Check if screen width is greater than 500px
 
 function handleScroll() {
+  if (!isAnimationEnabled) return; // Exit the function if animation is disabled
+
   const newPosition = window.scrollY;
   const scrollDifference = newPosition - initialScrollPosition;
   row1.style.transform = `translateX(${initialTransform1 + scrollDifference * 0.15}px)`;
@@ -15,7 +17,7 @@ function handleScroll() {
 
 function checkElementsInView(entries) {
   entries.forEach(entry => {
-    if (entry.isIntersecting || entry.intersectionRatio > 5) {
+    if ((entry.isIntersecting || entry.intersectionRatio > 5) && isAnimationEnabled) {
       initialScrollPosition = window.scrollY;
       storeInitialTransform();
       window.addEventListener('scroll', handleScroll);
@@ -36,21 +38,17 @@ const observer = new IntersectionObserver(checkElementsInView, { threshold: 0.01
 observer.observe(row1);
 observer.observe(row2);
 
-
-///////////////////////////////////////////
-
 window.addEventListener("scroll", () => {
-  const scrollPosition = window.scrollY;                                //extra height    // below div height - 10
+  if (!isAnimationEnabled) return; 
+
+  const scrollPosition = window.scrollY;
   const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-
   const scrollPercentage = (scrollPosition / totalHeight) * 100;
-
-  console.log(scrollPercentage,',',scrollPosition,',',totalHeight);
+  console.log(scrollPercentage, ',', scrollPosition, ',', totalHeight);
   const maxBorderRadius = 50;
-
   const newBorderRadius = (maxBorderRadius - (maxBorderRadius * scrollPercentage) / 100);
- // console.log(newBorderRadius);
   scrollDiv.style.borderRadius = `0% 0% 50% 50% / ${newBorderRadius}% ${newBorderRadius}% ${newBorderRadius}% ${newBorderRadius}%`;
-  
+  const initialPaddingBottom = 25;
+  const newPaddingBottom = initialPaddingBottom - (scrollPercentage * initialPaddingBottom) / 100;
+  scrollDiv.style.paddingBottom = `${newPaddingBottom}vw`;
 });
