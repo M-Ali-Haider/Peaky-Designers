@@ -52,37 +52,6 @@ magicButton.addEventListener(`mouseleave`,()=>{
     topBar.style.backgroundColor=`white`;
   }
 });
-
-    const magicButton4 = document.getElementById('magicButton');
-    const whyMagic = document.getElementById('whymagicc');
-
-    const range=3.75;
-    const ranger=4.75;
-
-    magicButton4.addEventListener('mousemove', (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
-      const magicRect = magicButton4.getBoundingClientRect();
-      const magicCenterX = magicRect.left + magicRect.width /2;
-      const magicCenterY = magicRect.top + magicRect.height /2;
-
-      const offsetX = (mouseX - magicCenterX) / range;
-      const offsetY = (mouseY - magicCenterY) / range;
-
-      const offseterX = (mouseX - magicCenterX) / ranger;
-      const offseterY = (mouseY - magicCenterY) / ranger;
-
-
-      magicButton4.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-      whyMagic.style.transform = `translate(${offseterX}px, ${offseterY}px)`;
-    });
-
-    magicButton.addEventListener('mouseleave', () => {
-      magicButton4.style.transform = 'translate(0, 0)';
-      whyMagic.style.transform = 'translate(0, 0)';
-    });
-
     const sideButtons = document.querySelectorAll('.sideButton');
     sideButtons.forEach(somethingHelper => {
       somethingHelper.addEventListener('mousemove', (e) => {
@@ -105,8 +74,63 @@ magicButton.addEventListener(`mouseleave`,()=>{
     });
 
 
+    const magicButton4 = document.getElementById('magicButton');
+    const whyMagic = document.getElementById('whymagicc');
+
+    const rangerrr=2.75;
+    const rangerrrr=3.75;
+
+    magicButton4.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      const magicRect = magicButton4.getBoundingClientRect();
+      const magicCenterX = magicRect.left + magicRect.width /2;
+      const magicCenterY = magicRect.top + magicRect.height /2;
+
+      const offsetX = (mouseX - magicCenterX) / rangerrr;
+      const offsetY = (mouseY - magicCenterY) / rangerrr;
+
+      const offseterX = (mouseX - magicCenterX) / rangerrrr;
+      const offseterY = (mouseY - magicCenterY) / rangerrrr;
+
+
+      magicButton4.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      whyMagic.style.transform = `translate(${offseterX}px, ${offseterY}px)`;
+    });
+
+    magicButton.addEventListener('mouseleave', () => {
+      magicButton4.style.transform = 'translate(0, 0)';
+      whyMagic.style.transform = 'translate(0, 0)';
+    });
 
 
 
+    const bbt = document.getElementById('bbt');
+    const bbtj = document.getElementById('bbtj');
+    const range=3.75;
+    const ranger=4.75;
+    bbt.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const bbtRect = bbt.getBoundingClientRect();
+      const bbtCenterX = bbtRect.left + bbtRect.width /2;
+      const bbtCenterY = bbtRect.top + bbtRect.height /2;
+
+      const offsetX = (mouseX - bbtCenterX) / range;
+      const offsetY = (mouseY - bbtCenterY) / range;
+
+      const offseterX = (mouseX - bbtCenterX) / ranger;
+      const offseterY = (mouseY - bbtCenterY) / ranger;
+
+
+      bbt.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      bbtj.style.transform = `translate(${offseterX}px, ${offseterY}px)`;
+    });
+
+    bbt.addEventListener('mouseleave', () => {
+      bbt.style.transform = 'translate(0, 0)';
+      bbtj.style.transform = 'translate(0, 0)';
+    });
   
     
