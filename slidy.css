@@ -124,13 +124,13 @@
         padding-right: 1vw;
     }
     .object{
-        max-width: 110px;
+        max-width: 105px;
     }
     .stacker-container{
         padding: 0;
     }
     .Aboutus{
-        height: 25vh;
+        height: 50vh;
     }
     #row1{
         transform: translateX(0%);
