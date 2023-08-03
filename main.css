@@ -1,18 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-body::-webkit-scrollbar {
-    width: 0; 
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -23,26 +8,6 @@ header{
     transition: background-color 0.5s ease;
    
 }
-.typing-text{
-    position: absolute;
-    top: 25%;
-    right: 15%;
-    z-index: 201;
-    font-family: Delicious;
-    font-size: 4vw;
-    display: flex;
-    align-items: center;
-}
-canvas{
-    display:flex;
-}
-.iamt{
-      color: white;
-      padding: 15px;
-}
-.textt{
-      color:black;
-  }
 .solid-header{
     position: absolute;
     top: 0;
@@ -57,7 +22,7 @@ canvas{
     right: 0;
 }
 .brand-name{
-    font-size:2.4vw;
+    font-size:3vw;
     transition: transform 0.25s ease;
     cursor: pointer;
 }
@@ -274,16 +239,4 @@ header.big{
     .project-position{
         font-size: 2vw;
     }
-    .typing-text{
-        top: 15%;
-        right: 5%;
-        z-index: 201;
-        font-family: Delicious;
-        font-size: 4vw;
-        display: flex;
-        align-items: center;
-    }
-    .iamt{
-        padding: 5px;
-  }
 }
