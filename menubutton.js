@@ -77,8 +77,8 @@ magicButton.addEventListener(`mouseleave`,()=>{
     const magicButton4 = document.getElementById('magicButton');
     const whyMagic = document.getElementById('whymagicc');
 
-    const rangerrr=2.75;
-    const rangerrrr=3.75;
+    const range=3.75;
+    const ranger=4.75;
 
     magicButton4.addEventListener('mousemove', (e) => {
       const mouseX = e.clientX;
@@ -88,11 +88,11 @@ magicButton.addEventListener(`mouseleave`,()=>{
       const magicCenterX = magicRect.left + magicRect.width /2;
       const magicCenterY = magicRect.top + magicRect.height /2;
 
-      const offsetX = (mouseX - magicCenterX) / rangerrr;
-      const offsetY = (mouseY - magicCenterY) / rangerrr;
+      const offsetX = (mouseX - magicCenterX) / range;
+      const offsetY = (mouseY - magicCenterY) / range;
 
-      const offseterX = (mouseX - magicCenterX) / rangerrrr;
-      const offseterY = (mouseY - magicCenterY) / rangerrrr;
+      const offseterX = (mouseX - magicCenterX) / ranger;
+      const offseterY = (mouseY - magicCenterY) / ranger;
 
 
       magicButton4.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
@@ -108,8 +108,7 @@ magicButton.addEventListener(`mouseleave`,()=>{
 
     const bbt = document.getElementById('bbt');
     const bbtj = document.getElementById('bbtj');
-    const range=3.75;
-    const ranger=4.75;
+    
     bbt.addEventListener('mousemove', (e) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
