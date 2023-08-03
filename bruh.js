@@ -14,8 +14,8 @@ let height = canvas.clientHeight;
 let rotation = 0;
 let dots = [];
 
-let DOTS_AMOUNT =500;
-let DOT_RADIUS = 1.5;
+let DOTS_AMOUNT =750;
+let DOT_RADIUS = 3;
 let GLOBE_RADIUS = width * 0.7;
 let GLOBE_CENTER_Z = -GLOBE_RADIUS;
 let PROJECTION_CENTER_X = width / 2; 
@@ -100,14 +100,6 @@ function afterResize() {
   PROJECTION_CENTER_X = width / 2;
   PROJECTION_CENTER_Y = height / 2;
   FIELD_OF_VIEW = width * 0.8;
-  if (width <= 500) {
-    DOTS_AMOUNT = 250;
-    DOT_RADIUS = 0.5;
-  } else {
-    DOTS_AMOUNT = 500;
-    DOT_RADIUS = 1.5;
-  }
-
   createDots();
 }
 
@@ -171,3 +163,22 @@ function onMouseLeave() {
 }
 createDots();
 window.requestAnimationFrame(render);
+function updateDotsAmount() {
+  if (window.innerWidth <= 500) {
+    DOTS_AMOUNT =500;
+    DOT_RADIUS=0.65;
+  } else {
+    DOTS_AMOUNT =750;
+    DOT_RADIUS=3;
+  }
+}
+updateDotsAmount();
+function handleViewportChange() {
+  updateDotsAmount();
+  afterResize(); 
+}
+const mediaQuery = window.matchMedia('(max-width: 500px)');
+mediaQuery.addListener(handleViewportChange);
+function removeMediaQueryListener() {
+  mediaQuery.removeListener(handleViewportChange);
+}
