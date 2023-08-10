@@ -19,12 +19,12 @@ rad_grad.style.top = 0 + 'px';
 
 smoltabs[0].addEventListener('mousemove',function(e){
     smolgrad1.classList.add('smalgradshow');
-    smolgrad1.style.transform = `translate(${e.pageX - smolgrad1.clientWidth / 2 - smoltabs[0].offsetLeft}px,${e.pageY - window.scrollY - smoltabs[0].getBoundingClientRect().top - smoltabs[0].clientHeight/2}px)`;
+    smolgrad1.style.transform = `translate(${e.pageX - smolgrad1.clientWidth / 2 - smoltabs[0].offsetLeft}px,${e.pageY - window.scrollY - smoltabs[0].getBoundingClientRect().top - smolgrad1.clientHeight/2}px)`;
 });
 smoltabs[1].addEventListener('mousemove',function(e){
 
     smolgrad2.classList.add('smalgradshow');
-    smolgrad2.style.transform = `translate(${e.pageX - smolgrad2.clientWidth / 2 - smoltabs[1].offsetLeft}px,${e.pageY - window.scrollY - smoltabs[1].getBoundingClientRect().top - smoltabs[1].clientHeight/2}px)`;
+    smolgrad2.style.transform = `translate(${e.pageX - smolgrad2.clientWidth / 2 - smoltabs[1].offsetLeft}px,${e.pageY - window.scrollY - smoltabs[1].getBoundingClientRect().top - smolgrad2.clientHeight/2}px)`;
 
 });
 smoltabs[0].addEventListener('mouseleave',function(){
