@@ -9,9 +9,17 @@
 }
 #line4{
     transform-origin: top;
-    transform: scaleY(0.1);
+    transform: scaleY(0);
     transition: 1.3s;
     height: 80px;
+}
+.line3{
+    width: 3px;
+    margin-left: 0;
+    height: 100px;
+    background-color: rgb(48, 48, 48);
+    transform: scaleY(0%);
+    transition:transform 0.25s;
 }
 #line3{
     height: 60px;
@@ -22,7 +30,6 @@
 #test{
     height: 100px;
 }
-
 .small2box{
     width: 100%;
     display: flex;
