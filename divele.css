@@ -87,10 +87,11 @@
     margin-top: 100px;
     color: white;
     pointer-events: none;
+    margin-bottom: 70px;
 }
 
 .line{
-    width: 4px;
+    width: 3px;
     margin-left: 0;
     height: 100px;
     background-color: rgb(48, 48, 48);
@@ -105,12 +106,29 @@
     transform: scaleY(1) !important;
 }
 
-#icon{
-    border: solid 5px rgb(48,48,48);
+#icon{ 
     color: black;
     border-radius: 100%;
     padding: 10px;
     transform: translate(-45%,1.5px);
+}
+.icon{
+    position: relative;
+}
+.rad-grad{
+    transition: 0.3s;
+    position: absolute;
+    height: 60px;
+    transform: translate(-45%,-15%);
+    width: 60px;
+    background: rgb(36,99,187);
+    background: radial-gradient(circle, rgba(36, 99, 187, 0.481) 15%, rgba(36,99,187,0.17083329913996848) 40%, rgba(255, 255, 255, 0) 65%);
+   
+}
+.icon-rad{
+    background: rgb(36,99,187);
+    background: radial-gradient(circle, rgba(36, 99, 187, 0.481) 15%, rgba(36,99,187,0.17083329913996848) 40%, rgba(255, 255, 255, 0) 65%);
+   
 }
 .bigline{
     width: 100%;
