@@ -44,6 +44,9 @@
     transform: rotateY(0deg);
     transition: 0.1s;
 }
+.small2box{
+    overflow-x: hidden;
+}
 .grad{
     z-index: -1;
     opacity: 0;
